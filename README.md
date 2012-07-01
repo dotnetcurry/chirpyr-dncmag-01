@@ -14,7 +14,7 @@ The source code has been explained in the DNC Magazine, Issue 01. This magazine 
 * Twitter: [@sumitkm](http://www.twitter.com/sumitkm)
 * Date: July, 2012
 * Version: 0.0.1
-* Website: [DNC Magazine](http://www.dotnetcurry.com/magazine/dnc-magazine-issue1.aspx)
+* Website: [DNC Magazine](http://www.dotnetcurry.com/magazine/)
 * GitHub: [DNC Magazine on Github](https://github.com/dotnetcurry/chirpyr-dncmag01/)
 
 
