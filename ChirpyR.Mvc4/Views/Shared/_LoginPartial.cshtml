@@ -1,0 +1,85 @@
+﻿@if (Request.IsAuthenticated)
+{
+    <p id="isAuthenticated">
+        Hello, <a id="userIdLabel" href="#">@User.Identity.Name</a> <a id="logout" href="#">
+            Log out</a>
+    </p>
+}
+else
+{
+    <ul id="isNotAuthenticated">
+        <li><a id="register" href="#">Register</a></li>
+        <li><a id="login" href="#">Log in</a></li>
+    </ul>
+}
+<div id="registerPopupContainer" style="display:none">
+    <div class="message-box">
+        Registering for ChirpyR is easy,
+        <br />
+        Step 1: Pick a name (not already in use)
+        <br />
+        Step 2: Set a password (don't worry we DO NOT save it in plain text)
+        <br />
+        Step 3: Provide an email address (this better be good because you gotta activate
+        your account from the mail we send you! NO, we won't sell it for money, you'll have
+        to trust us on that one)
+        <br />
+        Step 4: Hit Register
+        <br />
+        Step 5: Click on link in Email to Activate!
+        <br />
+    </div>
+    <div>
+        <div class="field-input-row">
+            <span class="field-name">User Name</span>
+            <input class="field-text" name="UserId" id="UserId" data-bind="value: UserId" />
+        </div>
+        <div class="field-input-row">
+            <span class="field-name">Password</span>
+            <input class="field-text" name="Password" id="Password" type="password" data-bind="value: Password" />
+        </div>
+        <div class="field-input-row">
+            <span class="field-name">Email</span>
+            <input class="field-text" name="Email" id="Email" data-bind="value: Email" />
+        </div>
+    </div>
+</div>
+<div id="loginPopupContainer" style="display:none">
+    <div>
+        <div class="field-input-row">
+            <span class="field-name">User Name</span>
+            <input class="field-text" name="LoginUser" id="LoginUser" />
+        </div>
+        <div class="field-input-row">
+            <span class="field-name">Password</span>
+            <input class="field-text" type="password" id="LoginPassword" name="LoginPassword" />
+        </div>
+    </div>
+</div>
+<div id="manageAccountPopupContainer" style="display:none">
+    <div  data-bind="with: currentUser">
+        <div class="field-input-row">
+            <span style="border-radius: 8px; -webkit-border-radius: 8px; -moz-border-radius: 8px;
+                background-image: url('http://www.gravatar.com/avatar/147bacafcdb00d67d3336ecdf4078ba5.png');
+                width: 80px; height: 80px; display: block"></span>
+            <span class="field-name">User Name</span>
+            <input class="field-text" data-bind="value: UserId" />
+        </div>
+        <div class="field-input-row">
+            <span class="field-name">Full Name</span>
+            <input class="field-text" type="text" name="fullName" id="fullName"  />
+        </div>
+        <div class="field-input-row">
+            <span class="field-name">Old Password</span>
+            <input class="field-text" data-bind="value: OldPassword" />
+        </div>
+        <div class="field-input-row">
+            <span class="field-name">Password</span>
+            <input class="field-text" data-bind="value: Password" />
+        </div>
+        <div class="field-input-row">
+            <span class="field-name">Email</span>
+            <input class="field-text" data-bind="value: Email"/>
+        </div>
+    </div>
+</div>

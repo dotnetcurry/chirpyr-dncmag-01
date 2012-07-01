@@ -1,0 +1,25 @@
+﻿.field-name
+{
+    width: 150px;
+    display: inline-block;
+}
+
+.field-input-row
+{
+    padding: 5px;
+}
+
+.field-text
+{
+    width: 300px;
+    border: 1px solid #0E0E0E;
+}
+
+.message-box
+{
+    font-family: @Arial, @Segoe UI;
+    font-size: 0.75em;
+    color: White;
+    padding: 5px;
+    background-color: rgba(45,45,45,0.6);
+}

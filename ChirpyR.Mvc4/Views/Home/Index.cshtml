@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <title>ASP.NET Web API</title>
+    <link href="@Url.Content("~/Content/Site.css")" rel="stylesheet" type="text/css" />
+    <script src="@Url.Content("~/Scripts/modernizr-2.0.6-development-only.js")" type="text/javascript"></script>
+    <meta name="viewport" content="width=device-width" />
+</head>
+<body>
+    <header>
+        <div class="content-wrapper">
+            <div class="float-left">
+                <p class="site-title">
+                    <a href="/">ChirpyR</a></p>
+            </div>
+            <div class="float-right">
+                @Html.Partial("_LoginPartial")
+            </div>
+        </div>
+    </header>
+    <div id="body">
+        <section class="featured">
+            <div class="content-wrapper">
+                <hgroup class="title">
+                    <h1>
+                        Welcome to ChirpyR</h1>
+                    <h2>
+                        The cool new place to hangout online!</h2>
+                </hgroup>
+                @if (Request.IsAuthenticated)
+                {
+                    <p>
+                        All set, let the Chirping begin!
+                    </p>
+                }
+                else
+                {
+                    <p>
+                        Register or Login to start Chirping!!!
+                    </p>
+                }
+            </div>
+        </section>
+        @{
+            <section class="content-wrapper main-content clear-fix">
+                @if (Request.IsAuthenticated)
+                {               
+                    <div style="height: 600px; width: 300px; display: inline-block;">
+                        @Html.Partial("_ChirpPartial")
+                    </div>
+                }
+                <aside style="height: 600px; max-width: 640px; min-width:540px; display: inline-block;">
+                    @Html.Partial("_ChirpStreamPartial")
+                </aside>
+            </section>
+        }
+    </div>
+</body>
+</html>

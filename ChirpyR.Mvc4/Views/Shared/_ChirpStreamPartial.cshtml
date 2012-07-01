@@ -1,0 +1,23 @@
+﻿<h2>ChirpyR Stream</h2>
+<ul id="chirpStream" data-bind="foreach: chirps"">
+    <li style="background-color: White;
+        border: 1px solid #F0F0F0">
+        <div style="display: inline-block; padding: 10px">
+            <div style="display: inline-block;">
+                <img alt="gravatar" height="64px" width="60px" 
+                  data-bind="attr: {src: GravatarUrl}" />
+            </div>
+            <div style="display: inline-block;">
+                <div style="vertical-align:top">
+                    <span data-bind="text: Text"></span>
+                </div>
+                <div style="background-color: #fefefe">
+                    by <span data-bind="text: By" 
+                    style="font-weight: bold"></span>
+                </div>
+                <div>
+                </div>
+            </div>
+        </div>
+    </li>
+</ul>
